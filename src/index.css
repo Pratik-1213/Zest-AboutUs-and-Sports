@@ -1,0 +1,24 @@
+:root {
+  --primary-orange: #F39C12;
+  --secondary-orange: #E67E22;
+  --accent-blue: #00A8FF;
+  --main-bg: #0f0f10;
+  --card-bg: #202022;
+  --text-primary: #E0E0E0;
+  --text-muted: #BDBDBD;
+  --border-rgba: rgba(255, 255, 255, 0.1);
+  --spotlight: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  margin: 0;
+  background-color: var(--main-bg);
+  background-image: radial-gradient(circle at top, #2a2a2e 0%, #0f0f10 100%);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--primary-orange); border-radius: 10px; }
