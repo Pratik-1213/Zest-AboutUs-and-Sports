@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Inter:wght@300;400;600;800&display=swap');
 
 :root {
-  --zest-bg: #030303;
-  --zest-card: #0a0a0a;
-  --zest-orange: #FF5E00;
-  --zest-orange-glow: rgba(255, 94, 0, 0.6);
-  --zest-white: #ffffff;
-  --zest-grey: #888888;
+  --zest-about-bg: #030303;
+  --zest-about-card: #0a0a0a;
+  --zest-about-orange: #FF5E00;
+  --zest-about-orange-glow: rgba(255, 94, 0, 0.6);
+  --zest-about-white: #ffffff;
+  --zest-about-grey: #888888;
 }
 
 body {
-    background-color: var(--zest-bg);
+    background-color: var(--zest-about-bg);
     margin: 0;
     padding: 0;
 }
 
-.zest-main-wrapper {
-  background-color: var(--zest-bg);
-  color: var(--zest-white);
+.zest-about-main-wrapper {
+  background-color: var(--zest-about-bg);
+  color: var(--zest-about-white);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   width: 100%;
@@ -25,7 +25,7 @@ body {
 }
 
 /* NOISE OVERLAY */
-.zest-noise-overlay {
+.zest-about-noise-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     pointer-events: none;
@@ -34,8 +34,8 @@ body {
     background: url('https://grainy-gradients.vercel.app/noise.svg');
 }
 
-/* --- 1. HERO SECTION (FIXED OVERLAPS) --- */
-.zest-hero {
+/* --- 1. HERO SECTION --- */
+.zest-about-hero {
   height: 100vh;
   width: 100%;
   position: relative;
@@ -45,7 +45,7 @@ body {
   overflow: hidden;
 }
 
-.zest-video-bg {
+.zest-about-video-bg {
   position: absolute;
   top: 0; 
   left: 0;
@@ -56,7 +56,7 @@ body {
 }
 
 /* Gradient Overlay forces text readability */
-.zest-gradient-overlay {
+.zest-about-gradient-overlay {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, #030303 90%);
@@ -64,7 +64,7 @@ body {
 }
 
 /* IFRAME ASPECT RATIO FIX */
-.zest-video-element {
+.zest-about-video-element {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -77,21 +77,21 @@ body {
 
 /* Scales video to cover screen (mimics object-fit: cover) */
 @media (min-aspect-ratio: 16/9) {
-  .zest-video-element {
+  .zest-about-video-element {
     height: 56.25vw;
     width: 100vw; 
   }
 }
 
 @media (max-aspect-ratio: 16/9) {
-  .zest-video-element {
+  .zest-about-video-element {
     width: 177.78vh;
     height: 100vh;
   }
 }
 
 /* CONTENT LAYER */
-.zest-hero-content {
+.zest-about-hero-content {
   position: relative;
   z-index: 10; /* Top Layer */
   text-align: center;
@@ -104,8 +104,8 @@ body {
   height: 100%;
 }
 
-/* Breadcrumbs (Positioned relative to Hero Content) */
-.zest-breadcrumbs {
+/* Breadcrumbs */
+.zest-about-breadcrumbs {
     position: absolute;
     top: 100px;
     left: 5%;
@@ -113,12 +113,12 @@ body {
     font-size: 1.2rem;
     letter-spacing: 2px;
 }
-.zest-home-link { color: var(--zest-grey); }
-.zest-slash { margin: 0 10px; color: var(--zest-orange); }
-.zest-current-page { color: var(--zest-white); border-bottom: 2px solid var(--zest-orange); }
+.zest-about-home-link { color: var(--zest-about-grey); }
+.zest-about-slash { margin: 0 10px; color: var(--zest-about-orange); }
+.zest-about-current-page { color: var(--zest-about-white); border-bottom: 2px solid var(--zest-about-orange); }
 
 /* Main Title */
-.zest-hero-title {
+.zest-about-hero-title {
   font-family: 'Teko', sans-serif;
   font-size: clamp(4rem, 12vw, 10rem);
   line-height: 0.85;
@@ -127,20 +127,20 @@ body {
   margin: 0;
 }
 
-.zest-hero-title span { display: inline-block; }
+.zest-about-hero-title span { display: inline-block; }
 
-.outline-text {
+.zest-about-outline-text {
   -webkit-text-stroke: 2px rgba(255,255,255,0.8);
   color: transparent;
 }
 @media (max-width: 768px) {
-  .outline-text { -webkit-text-stroke: 1px rgba(255,255,255,0.8); }
+  .zest-about-outline-text { -webkit-text-stroke: 1px rgba(255,255,255,0.8); }
 }
 
-.text-orange { color: var(--zest-orange); }
-.glow-text { text-shadow: 0 0 30px var(--zest-orange-glow); }
+.zest-about-text-orange { color: var(--zest-about-orange); }
+.zest-about-glow-text { text-shadow: 0 0 30px var(--zest-about-orange-glow); }
 
-.zest-hero-meta {
+.zest-about-hero-meta {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -148,7 +148,7 @@ body {
   margin-top: 30px;
 }
 
-.zest-meta-pill {
+.zest-about-meta-pill {
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.1);
@@ -161,7 +161,7 @@ body {
     letter-spacing: 1px;
 }
 
-.zest-scroll-indicator {
+.zest-about-scroll-indicator {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -171,10 +171,10 @@ body {
     opacity: 0.7;
 }
 
-.zest-scroll-line {
+.zest-about-scroll-line {
     width: 2px;
     height: 40px;
-    background: var(--zest-orange);
+    background: var(--zest-about-orange);
     margin: 10px auto 0;
     animation: scrollLine 2s infinite;
 }
@@ -187,8 +187,8 @@ body {
 }
 
 /* --- 2. MARQUEE --- */
-.zest-marquee {
-    background: var(--zest-orange);
+.zest-about-marquee {
+    background: var(--zest-about-orange);
     color: #000;
     padding: 15px 0;
     overflow: hidden;
@@ -199,7 +199,7 @@ body {
     margin: 50px 0;
 }
 
-.zest-marquee-content {
+.zest-about-marquee-content {
     display: inline-block;
     font-family: 'Teko', sans-serif;
     font-size: 2rem;
@@ -213,34 +213,34 @@ body {
 }
 
 /* --- 3. INFO SECTIONS --- */
-.zest-content-body {
+.zest-about-content-body {
   padding: 80px 5%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.zest-info-section {
+.zest-about-info-section {
   display: flex;
   align-items: center;
   gap: 80px;
   margin-bottom: 150px;
 }
 
-.zest-info-section.reverse {
+.zest-about-info-section.reverse {
   flex-direction: row-reverse;
 }
 
-.zest-info-text { flex: 1; }
+.zest-about-info-text { flex: 1; }
 
-.zest-label {
-    color: var(--zest-orange);
+.zest-about-label {
+    color: var(--zest-about-orange);
     font-family: 'Teko', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 10px;
     letter-spacing: 2px;
 }
 
-.zest-heading {
+.zest-about-heading {
     font-family: 'Teko', sans-serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1;
@@ -248,19 +248,19 @@ body {
     text-transform: uppercase;
 }
 
-.zest-desc {
+.zest-about-desc {
     color: #ccc;
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 40px;
     font-weight: 300;
 }
-.zest-desc strong { color: #fff; font-weight: 600; }
+.zest-about-desc strong { color: #fff; font-weight: 600; }
 
-.zest-btn-modern {
+.zest-about-btn-modern {
     background: transparent;
-    border: 1px solid var(--zest-orange);
-    color: var(--zest-white);
+    border: 1px solid var(--zest-about-orange);
+    color: var(--zest-about-white);
     padding: 12px 30px;
     font-family: 'Teko', sans-serif;
     font-size: 1.3rem;
@@ -272,13 +272,13 @@ body {
     text-decoration: none;
 }
 
-.zest-btn-modern:hover {
-    background: var(--zest-orange);
+.zest-about-btn-modern:hover {
+    background: var(--zest-about-orange);
     color: #000;
-    box-shadow: 0 0 20px var(--zest-orange-glow);
+    box-shadow: 0 0 20px var(--zest-about-orange-glow);
 }
 
-.zest-info-img-wrapper {
+.zest-about-info-img-wrapper {
     flex: 1;
     height: 500px;
     overflow: hidden;
@@ -288,20 +288,20 @@ body {
     border: 1px solid #222;
 }
 
-.zest-info-img-wrapper img {
+.zest-about-info-img-wrapper img {
     width: 100%;
     height: 130%; /* Extra height for parallax */
     object-fit: cover;
 }
 
-.zest-img-overlay {
+.zest-about-img-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
 }
 
 /* --- 4. STATS --- */
-.zest-stats-container {
+.zest-about-stats-container {
     display: flex;
     justify-content: space-around;
     padding: 100px 5%;
@@ -312,27 +312,27 @@ body {
     border-bottom: 1px solid #111;
 }
 
-.zest-stat-box {
+.zest-about-stat-box {
     text-align: center;
     z-index: 2;
     padding: 20px;
 }
 
-.zest-stat-number {
+.zest-about-stat-number {
     font-family: 'Teko', sans-serif;
     font-size: clamp(3rem, 6vw, 6rem);
     line-height: 1;
     margin: 10px 0;
-    color: var(--zest-white);
+    color: var(--zest-about-white);
 }
 
-.zest-stat-icon { color: var(--zest-orange); margin-bottom: 10px; }
-.zest-stat-box p { color: #888; font-size: 0.9rem; letter-spacing: 2px; }
+.zest-about-stat-icon { color: var(--zest-about-orange); margin-bottom: 10px; }
+.zest-about-stat-box p { color: #888; font-size: 0.9rem; letter-spacing: 2px; }
 
 
 /* --- 5. HIGHLIGHTS (HYBRID SCROLL SYSTEM) --- */
 
-.zest-highlights-wrapper {
+.zest-about-highlights-wrapper {
   display: flex;
   flex-wrap: nowrap;
   background: #000;
@@ -347,7 +347,7 @@ body {
   align-items: center;
 }
 
-.zest-highlight-spacer {
+.zest-about-highlight-spacer {
   flex-shrink: 0;
   width: 30vw;   /* adjust spacing here */
   height: 100vh;
@@ -355,20 +355,20 @@ body {
 
 
 /* Hide scrollbar for cleaner look */
-.zest-highlights-wrapper::-webkit-scrollbar {
+.zest-about-highlights-wrapper::-webkit-scrollbar {
   display: none;
 }
 
 /* DESKTOP OVERRIDES (GSAP Animation) */
 @media (min-width: 900px) {
-  .zest-highlights-wrapper {
+  .zest-about-highlights-wrapper {
     height: 100vh;
     width: max-content; /* Critical for GSAP math */
     overflow: hidden; /* Disable scrollbars during animation */
   }
 }
 
-.zest-highlights-intro {
+.zest-about-highlights-intro {
   /* Mobile Default */
   width: 100vw;
   height: 60vh;
@@ -384,21 +384,21 @@ body {
   scroll-snap-align: center;
 }
 
-.zest-highlights-intro::before {
+.zest-about-highlights-intro::before {
     content: ''; position: absolute; inset:0; background: rgba(0,0,0,0.8);
 }
 
-.zest-big-text {
+.zest-about-big-text {
     font-family: 'Teko', sans-serif;
     font-size: clamp(4rem, 15vw, 8rem);
     line-height: 0.9;
     position: relative; z-index: 2;
 }
 
-.zest-swipe-hint {
+.zest-about-swipe-hint {
     position: relative; z-index: 2;
     margin-top: 20px;
-    color: var(--zest-orange);
+    color: var(--zest-about-orange);
     display: flex; align-items: center; gap: 10px;
     font-size: 1.1rem;
 }
@@ -407,7 +407,7 @@ body {
 @keyframes bounce { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
 
 /* HIGHLIGHT CARD STYLES */
-.zest-highlight-card {
+.zest-about-highlight-card {
   /* Mobile Default */
   width: 85vw; /* Show slightly less than full width to encourage scrolling */
   height: 60vh;
@@ -421,15 +421,15 @@ body {
 
 /* Desktop Card Override */
 @media (min-width: 900px) {
-  .zest-highlights-intro { width: 100vw; height: 100vh; }
-  .zest-highlight-card {
+  .zest-about-highlights-intro { width: 100vw; height: 100vh; }
+  .zest-about-highlight-card {
     width: 100vw;
     height: 100vh;
     border-right: 1px solid #111;
   }
 }
 
-.zest-card-inner {
+.zest-about-card-inner {
     width: 90%; 
     height: 80%; 
     position: relative;
@@ -441,17 +441,17 @@ body {
 }
 
 @media (min-width: 900px) {
-  .zest-card-inner { width: 60vw; height: 70vh; }
+  .zest-about-card-inner { width: 60vw; height: 70vh; }
 }
 
-.zest-card-inner img {
+.zest-about-card-inner img {
     width: 100%; height: 100%; object-fit: cover;
     transition: transform 0.6s;
 }
 
-.zest-card-inner:hover img { transform: scale(1.1); }
+.zest-about-card-inner:hover img { transform: scale(1.1); }
 
-.zest-card-content {
+.zest-about-card-content {
     position: absolute;
     bottom: 0; left: 0; right: 0;
     padding: 20px;
@@ -460,33 +460,33 @@ body {
     justify-content: space-between;
     align-items: flex-end;
 }
-@media (min-width: 900px) { .zest-card-content { padding: 40px; } }
+@media (min-width: 900px) { .zest-about-card-content { padding: 40px; } }
 
-.zest-card-content h3 {
+.zest-about-card-content h3 {
     font-family: 'Teko', sans-serif;
     font-size: 2.5rem;
     margin: 0;
-    color: var(--zest-white);
+    color: var(--zest-about-white);
 }
-@media (min-width: 900px) { .zest-card-content h3 { font-size: 4rem; } }
+@media (min-width: 900px) { .zest-about-card-content h3 { font-size: 4rem; } }
 
-.zest-play-btn {
+.zest-about-play-btn {
     width: 40px; height: 40px;
-    background: var(--zest-orange);
+    background: var(--zest-about-orange);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     color: #000;
     cursor: pointer;
     transition: transform 0.3s;
 }
-@media (min-width: 900px) { .zest-play-btn { width: 60px; height: 60px; } }
+@media (min-width: 900px) { .zest-about-play-btn { width: 60px; height: 60px; } }
 
-.zest-card-inner:hover .zest-play-btn {
+.zest-about-card-inner:hover .zest-about-play-btn {
     transform: scale(1.15) rotate(90deg);
 }
 
-.end-card { background: #000; }
-.zest-final-msg {
+.zest-about-end-card { background: #000; }
+.zest-about-final-msg {
     font-family: 'Teko', sans-serif;
     font-size: 4rem;
     text-align: center;
@@ -494,15 +494,15 @@ body {
     color: #333;
     transition: color 0.5s;
 }
-.end-card:hover .zest-final-msg { color: var(--zest-orange); }
+.zest-about-end-card:hover .zest-about-final-msg { color: var(--zest-about-orange); }
 
 @media (min-width: 900px) {
-    .zest-final-msg { font-size: clamp(5rem, 15vw, 10rem); }
+    .zest-about-final-msg { font-size: clamp(5rem, 15vw, 10rem); }
 }
 
 
 /* --- 6. VIDEO MODAL STYLES --- */
-.zest-video-modal {
+.zest-about-video-modal {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.9);
@@ -519,7 +519,7 @@ body {
   to { opacity: 1; }
 }
 
-.zest-video-container {
+.zest-about-video-container {
   position: relative;
   width: 90%;
   max-width: 1100px;
@@ -530,13 +530,13 @@ body {
   border-radius: 12px;
 }
 
-.zest-video-container iframe {
+.zest-about-video-container iframe {
   width: 100%;
   height: 100%;
   border-radius: 12px;
 }
 
-.zest-close-btn {
+.zest-about-close-btn {
   position: absolute;
   top: -50px;
   right: 0;
@@ -548,27 +548,27 @@ body {
   padding: 10px;
 }
 
-.zest-close-btn:hover {
+.zest-about-close-btn:hover {
   transform: scale(1.2);
-  color: var(--zest-orange);
+  color: var(--zest-about-orange);
 }
 
 /* --- 7. GENERAL RESPONSIVE FIXES --- */
 @media (max-width: 900px) {
-    .zest-info-section, .zest-info-section.reverse {
+    .zest-about-info-section, .zest-about-info-section.reverse {
         flex-direction: column;
         gap: 40px;
         margin-bottom: 80px;
     }
 
-    .zest-info-img-wrapper {
+    .zest-about-info-img-wrapper {
         width: 100%;
         height: 350px;
     }
 
-    .zest-heading { font-size: 3rem; }
+    .zest-about-heading { font-size: 3rem; }
     
-    .zest-stats-container {
+    .zest-about-stats-container {
         flex-direction: column;
         gap: 40px;
         padding: 50px 5%;
@@ -576,8 +576,7 @@ body {
 }
 
 @media (max-width: 600px) {
-    .zest-hero-title { font-size: 4.5rem; }
-    .zest-breadcrumbs { top: 20px; font-size: 0.9rem; }
-    .zest-content-body { padding: 50px 5%; }
+    .zest-about-hero-title { font-size: 4.5rem; }
+    .zest-about-breadcrumbs { top: 20px; font-size: 0.9rem; }
+    .zest-about-content-body { padding: 50px 5%; }
 }
-
