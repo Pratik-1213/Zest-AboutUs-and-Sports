@@ -107,7 +107,7 @@ body {
 /* Breadcrumbs (Positioned relative to Hero Content) */
 .zest-breadcrumbs {
     position: absolute;
-    top: 40px;
+    top: 100px;
     left: 5%;
     font-family: 'Teko', sans-serif;
     font-size: 1.2rem;
